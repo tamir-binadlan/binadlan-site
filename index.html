@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Binadlan LLC — a Kansas-based residential real estate investment company. Long-term hold investor acquiring and operating single-family and small multifamily homes across Kansas and Dallas–Fort Worth.">
+<meta name="robots" content="index, follow">
+<title>Binadlan LLC — Residential Real Estate Investment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,30..100;1,9..144,300..500,30..100&family=Inter+Tight:wght@400;500;600&display=swap">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%236B5B95'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-style='italic' font-size='62' font-weight='400' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<style>
+  :root {
+    --ink:        #16161c;
+    --ink-soft:   #44444f;
+    --ink-mute:   #74747f;
+    --rule:       #e8e6ee;
+    --rule-soft:  #f0eef4;
+    --paper:      #fdfcff;
+    --paper-tint: #f7f4fb;
+    --accent:     #6b5b95;
+    --accent-deep:#54467a;
+    --accent-soft:#b8acd4;
+    --max: 1120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern", "ss01", "cv11";
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 36px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Header ─────────────────────────────────────────────────────── */
+  header {
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--rule);
+    background: rgba(253, 252, 255, 0.86);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    position: relative;
+    z-index: 5;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .brand-name {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-variation-settings: "opsz" 96, "SOFT" 30, "wght" 400;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  .brand-name .dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateY(-5px);
+    margin: 0 9px;
+  }
+
+  .brand-tag {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ── Hero ───────────────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 140px 0 128px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -10%;
+    width: 72%;
+    background-image: url("./assets/hero-sfr.jpg");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    filter: saturate(0.7) brightness(1.04) contrast(0.97) blur(0.5px);
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.08) 14%,
+      rgba(0, 0, 0, 0.42) 32%,
+      rgba(0, 0, 0, 0.80) 60%,
+      black 95%
+    );
+            mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.08) 14%,
+      rgba(0, 0, 0, 0.42) 32%,
+      rgba(0, 0, 0, 0.80) 60%,
+      black 95%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(253, 252, 255, 0.95) 0%,
+      rgba(253, 252, 255, 0.70) 38%,
+      rgba(247, 244, 251, 0.38) 65%,
+      rgba(247, 244, 251, 0.28) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0;
+    animation: fadeUp 700ms 80ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+
+  .hero-eyebrow .bars {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 12px;
+  }
+
+  .hero-eyebrow .bars span {
+    width: 2px;
+    background: var(--accent);
+    display: block;
+  }
+
+  .hero-eyebrow .bars span:nth-child(1) { height: 40%; }
+  .hero-eyebrow .bars span:nth-child(2) { height: 65%; }
+  .hero-eyebrow .bars span:nth-child(3) { height: 100%; }
+
+  .hero h1 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50, "wght" 350;
+    font-size: clamp(36px, 6vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 32px;
+    max-width: 18ch;
+    color: var(--ink);
+    opacity: 0;
+    animation: fadeUp 800ms 160ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+
+  .hero h1 .accent-word {
+    color: var(--accent);
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "wght" 350;
+  }
+
+  .hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 800ms 280ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Section base ───────────────────────────────────────────────── */
+  section {
+    padding: 96px 0;
+    position: relative;
+  }
+
+  .section-tinted {
+    background: var(--paper-tint);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+
+  h2 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-variation-settings: "opsz" 96, "SOFT" 50, "wght" 380;
+    font-size: clamp(26px, 3.4vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.018em;
+    margin: 0 0 56px;
+    color: var(--ink);
+    max-width: 24ch;
+  }
+
+  h2 em {
+    font-style: italic;
+    color: var(--accent);
+    font-variation-settings: "opsz" 96, "SOFT" 100, "wght" 380;
+  }
+
+  /* ── Focus areas grid ───────────────────────────────────────────── */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .focus-item {
+    padding: 40px 32px 8px 0;
+    transition: background 280ms ease;
+    position: relative;
+  }
+
+  .focus-item:not(:last-child) {
+    border-right: 1px solid var(--rule);
+    padding-right: 32px;
+  }
+
+  .focus-item:not(:first-child) {
+    padding-left: 32px;
+  }
+
+  .focus-item:hover {
+    background: rgba(107, 91, 149, 0.04);
+  }
+
+  .focus-num {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 100, "wght" 300;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 18px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .focus-item h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 48, "SOFT" 50, "wght" 400;
+    font-size: 22px;
+    margin: 0 0 14px;
+    color: var(--ink);
+    letter-spacing: -0.012em;
+  }
+
+  .focus-item p {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  /* ── About / two-column ─────────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 96px;
+    align-items: start;
+  }
+
+  .two-col h2 { margin-bottom: 0; }
+
+  .prose p {
+    font-size: 17.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 22px;
+  }
+
+  .prose p:last-child { margin-bottom: 0; }
+
+  .prose strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── Principles ─────────────────────────────────────────────────── */
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 56px;
+  }
+
+  .principle {
+    border-left: 1px solid var(--accent);
+    padding: 4px 0 4px 22px;
+  }
+
+  .principle-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50, "wght" 420;
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+
+  .principle p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  /* ── Markets line ───────────────────────────────────────────────── */
+  .markets-line {
+    display: flex;
+    align-items: baseline;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .market {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 50, "wght" 380;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+
+  .market-sub {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  .sep {
+    color: var(--accent);
+    font-size: 22px;
+    opacity: 0.5;
+  }
+
+  /* ── Structure facts row (lender-facing) ─────────────────────────
+     Small dense facts panel — entity, jurisdiction, year, focus.
+     Banks read this in three seconds and get what they need. */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .fact {
+    padding: 24px 24px 24px 0;
+  }
+
+  .fact:not(:first-child) {
+    padding-left: 24px;
+    border-left: 1px solid var(--rule);
+  }
+
+  .fact-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6px;
+  }
+
+  .fact-value {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50, "wght" 400;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Contact ────────────────────────────────────────────────────── */
+  .contact {
+    padding: 112px 0;
+    text-align: left;
+  }
+
+  .contact-label {
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--ink-mute);
+    margin-bottom: 14px;
+  }
+
+  .contact a {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-variation-settings: "opsz" 96, "SOFT" 100, "wght" 380;
+    font-size: clamp(26px, 3.6vw, 40px);
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -0.018em;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    word-break: break-word;
+  }
+
+  .contact a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .contact a:hover::after,
+  .contact a:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .contact a:focus-visible { outline: none; }
+
+  /* ── Footer ─────────────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px 0 40px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.01em;
+  }
+
+  footer .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  footer .footer-mark {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 9, "SOFT" 100, "wght" 400;
+    font-style: italic;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    font-size: 11px;
+  }
+
+  footer .footer-address {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+
+  /* ── Responsive ─────────────────────────────────────────────────
+     Mobile is reviewed top-to-bottom: header, hero, sections,
+     facts row, contact, footer. Each gets specific tuning. */
+
+  @media (max-width: 900px) {
+    .two-col {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .hero::after { width: 80%; }
+    .hero::before {
+      background: linear-gradient(
+        90deg,
+        rgba(253, 252, 255, 0.96) 0%,
+        rgba(253, 252, 255, 0.78) 50%,
+        rgba(247, 244, 251, 0.50) 100%
+      );
+    }
+    .facts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .fact:nth-child(3) { border-left: none; padding-left: 0; }
+    .fact:nth-child(3), .fact:nth-child(4) {
+      border-top: 1px solid var(--rule);
+      padding-top: 24px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .container { padding: 0 22px; }
+    header { padding: 22px 0 18px; }
+    .brand-name { font-size: 20px; }
+    .brand-tag { font-size: 11px; }
+
+    .hero { padding: 64px 0 64px; }
+    section { padding: 56px 0; }
+
+    /* On mobile, photo bleeds in from bottom rather than side */
+    .hero::after {
+      width: 100%;
+      right: 0;
+      top: auto;
+      bottom: -6%;
+      height: 48%;
+      -webkit-mask-image: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 30%,
+        black 100%
+      );
+              mask-image: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 30%,
+        black 100%
+      );
+    }
+    .hero::before {
+      background: linear-gradient(
+        180deg,
+        rgba(253, 252, 255, 0.92) 0%,
+        rgba(253, 252, 255, 0.78) 60%,
+        rgba(247, 244, 251, 0.55) 100%
+      );
+    }
+    .hero-eyebrow { font-size: 10.5px; gap: 10px; margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(32px, 9vw, 44px); margin-bottom: 24px; }
+    .hero p { font-size: 17px; }
+
+    .focus-grid { grid-template-columns: 1fr; }
+    .focus-item {
+      padding: 28px 0 8px 0 !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--rule);
+    }
+    .focus-item:last-child { border-bottom: none; }
+    .focus-num { font-size: 24px; margin-bottom: 14px; }
+    .focus-item h3 { font-size: 20px; }
+
+    h2 { margin-bottom: 32px; }
+
+    .principles {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .principle { padding: 4px 0 4px 18px; }
+
+    .markets-line { gap: 16px; }
+    .market { font-size: 22px; }
+    .market-sub { margin-left: 0; width: 100%; }
+
+    .facts {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+    }
+    .fact {
+      padding: 20px 0;
+      border-left: none !important;
+    }
+    .fact:not(:first-child) {
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .fact-value { font-size: 16px; }
+
+    .contact { padding: 64px 0; }
+    .contact a { font-size: clamp(22px, 7vw, 30px); }
+
+    footer { padding: 24px 0 28px; }
+    footer .footer-row { gap: 10px; flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 420px) {
+    body { font-size: 16px; }
+    .brand { gap: 4px; flex-direction: column; align-items: flex-start; }
+    .container { padding: 0 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+    .hero-eyebrow, .hero h1, .hero p { opacity: 1; }
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: white;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      <span class="brand-name">Binadlan<span class="dot"></span>LLC</span>
+      <span class="brand-tag">Residential Real Estate Investment</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>A long-horizon owner of residential housing</span>
+      </div>
+      <h1>Building a portfolio of <span class="accent-word">quality</span> residential homes.</h1>
+      <p>We acquire carefully, improve thoughtfully, and operate with the discipline of capital that intends to stay. Binadlan operates as a long-term hold investor — private, founder-owned, and conservatively financed.</p>
+    </div>
+  </section>
+
+  <section class="section-tinted">
+    <div class="container">
+      <p class="eyebrow">Focus Areas</p>
+      <h2>Three disciplines, <em>one standard</em>.</h2>
+      <div class="focus-grid">
+        <div class="focus-item">
+          <span class="focus-num">01</span>
+          <h3>Acquisition</h3>
+          <p>We underwrite each property on its own merits — local fundamentals, condition, basis, and the realistic path to a stabilized, well-run asset.</p>
+        </div>
+        <div class="focus-item">
+          <span class="focus-num">02</span>
+          <h3>Improvement</h3>
+          <p>Renovations are scoped to the building and the neighborhood. We invest where it matters for durability and livability, and not a dollar where it doesn't.</p>
+        </div>
+        <div class="focus-item">
+          <span class="focus-num">03</span>
+          <h3>Operation</h3>
+          <p>Once stabilized, our homes are operated for the long term. Quality maintenance, responsive management, and patient ownership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Patient capital, <em>applied carefully</em>.</h2>
+        </div>
+        <div class="prose">
+          <p>Binadlan LLC is a privately held Kansas company founded by <strong>Tamir Fridman</strong> and <strong>Niran Avni</strong>. Tamir brings two decades of leadership in data and analytics at growth-stage technology companies; Niran brings over a decade of US operating and entrepreneurial experience and on-the-ground market presence.</p>
+          <p>Together they apply institutional discipline to residential investment at a deliberate scale — careful underwriting, durable improvements, and long-term ownership of every asset acquired.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tinted">
+    <div class="container">
+      <div class="two-col" style="margin-bottom: 64px;">
+        <div>
+          <p class="eyebrow">Principles</p>
+          <h2>How we work, <em>plainly stated</em>.</h2>
+        </div>
+        <div>
+          <div class="principles">
+            <div class="principle">
+              <p class="principle-title">Underwrite the property, not the market.</p>
+              <p>Markets cycle; buildings are specific. We price each home for what it is.</p>
+            </div>
+            <div class="principle">
+              <p class="principle-title">Improve for the long term.</p>
+              <p>Durable materials, honest scopes, no cosmetic shortcuts that age badly.</p>
+            </div>
+            <div class="principle">
+              <p class="principle-title">Operate like an owner.</p>
+              <p>Responsive maintenance, fair lease terms, professional management.</p>
+            </div>
+            <div class="principle">
+              <p class="principle-title">Match leverage to the asset.</p>
+              <p>Conventional financing on stabilized properties. Conservative loan-to-value, sized for the cycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="eyebrow">Markets</p>
+      <div class="markets-line">
+        <span class="market">Kansas</span>
+        <span class="sep">/</span>
+        <span class="market">Dallas–Fort Worth</span>
+        <span class="market-sub">Primary markets</span>
+      </div>
+
+      <!-- Lender-facing facts row -->
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-label">Entity</div>
+          <div class="fact-value">Binadlan LLC</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Jurisdiction</div>
+          <div class="fact-value">State of Kansas</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Established</div>
+          <div class="fact-value">May 2026</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Strategy</div>
+          <div class="fact-value">Long-term hold, 1–4 unit residential</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <div class="contact-label">For lending, partnership, or vendor inquiries</div>
+      <a href="mailto:contact@binadlan.com">contact@binadlan.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <span>© 2026 Binadlan LLC · A Kansas Limited Liability Company</span>
+      <span class="footer-mark">Est. 2026 · Registered in Kansas</span>
+    </div>
+    <div class="footer-address">
+      4601 E. Douglas Ave., Suite 150 · Wichita, KS 67218
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

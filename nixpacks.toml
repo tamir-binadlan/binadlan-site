@@ -1,0 +1,9 @@
+# Railway / Nixpacks configuration
+# Serves the static site using Python's built-in HTTP server.
+# Railway injects $PORT at runtime; nixpacks installs Python 3 as the only dependency.
+
+[phases.setup]
+nixPkgs = ["python3"]
+
+[start]
+cmd = "python3 -m http.server $PORT --bind 0.0.0.0"
